@@ -43,8 +43,8 @@ public class ColorLayerManager : MonoBehaviour
         if (Camera.main != null)
         {
             Camera.main.backgroundColor = redLayerActive
-                ? new Color(0.35f, 0.12f, 0.15f)
-                : new Color(0.10f, 0.20f, 0.38f);
+                ? new Color(48f / 255f, 122f / 255f, 189f / 255f) // #307ABD
+                : new Color(210f / 255f, 57f / 255f, 57f / 255f);   // #D23939
         }
     }
 }

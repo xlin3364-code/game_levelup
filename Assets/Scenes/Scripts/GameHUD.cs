@@ -28,7 +28,7 @@ public class GameHUD : MonoBehaviour
 
         GUI.Label(
             new Rect(20, 50, 600, 30),
-            "Move: A / D     Jump: Space",
+            "Move: A / D     Jump: Space     Restart: R",
             bodyStyle
         );
 

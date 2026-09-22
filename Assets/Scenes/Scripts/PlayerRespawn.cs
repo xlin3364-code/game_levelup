@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerRespawn : MonoBehaviour
 {
@@ -11,6 +13,16 @@ public class PlayerRespawn : MonoBehaviour
     {
         spawnPosition = transform.position;
         rb = GetComponent<Rigidbody2D>();
+    }
+
+    private void Update()
+    {
+        if (Keyboard.current != null &&
+            Keyboard.current.rKey.wasPressedThisFrame)
+        {
+            DeathCount++;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().path);
+        }
     }
 
     public void Respawn()
